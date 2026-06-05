@@ -1,0 +1,365 @@
+[0m01:22:02.850696 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71D269050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B71D269D50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B7206B2850>]}
+
+
+============================== 01:22:02.857709 | a4b908c3-2476-400b-9603-aeb1145bb88c ==============================
+[0m01:22:02.857709 [info ] [MainThread]: Running with dbt=1.11.11
+[0m01:22:02.858790 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abdallah\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt init pitchiq', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m01:22:02.891775 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\Abdallah\.dbt
+[0m01:22:02.895779 [debug] [MainThread]: Starter project path: D:\Iti\graduation project\football-analytics\venv\Lib\site-packages\dbt\include\starter_project
+[0m01:22:02.993257 [info ] [MainThread]: 
+Your new dbt project "pitchiq" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m01:22:02.994261 [info ] [MainThread]: Setting up your profile.
+[0m01:22:19.255804 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m01:22:19.256810 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m01:22:19.257810 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m01:24:14.931865 [info ] [MainThread]: Profile pitchiq written to C:\Users\Abdallah\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m01:24:14.935866 [debug] [MainThread]: Command `dbt init` succeeded at 01:24:14.935866 after 132.18 seconds
+[0m01:24:14.937867 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B7207CC390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B7207CC150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B7207CE010>]}
+[0m01:24:14.938863 [debug] [MainThread]: Flushing usage events
+[0m01:24:15.723578 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:39:45.837886 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A1790ECD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A18A07150>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000020A18A07910>]}
+
+
+============================== 01:39:45.841874 | f18be480-f3e8-4a5a-8817-3b1ce49748eb ==============================
+[0m01:39:45.841874 [info ] [MainThread]: Running with dbt=1.11.11
+[0m01:39:45.843842 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abdallah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m01:39:45.865874 [info ] [MainThread]: dbt version: 1.11.11
+[0m01:39:45.866840 [info ] [MainThread]: python version: 3.11.3
+[0m01:39:45.867851 [info ] [MainThread]: python path: C:\Users\Abdallah\AppData\Local\Programs\Python\Python311\python.exe
+[0m01:39:45.868845 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m01:39:46.840991 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m01:39:46.842014 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m01:39:46.842946 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m01:39:46.926945 [info ] [MainThread]: Using profiles dir at C:\Users\Abdallah\.dbt
+[0m01:39:46.927943 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abdallah\.dbt\profiles.yml
+[0m01:39:46.928941 [info ] [MainThread]: Using dbt_project.yml file at D:\Iti\graduation project\football-analytics\dbt\dbt_project.yml
+[0m01:39:46.929946 [info ] [MainThread]: adapter type: snowflake
+[0m01:39:46.930987 [info ] [MainThread]: adapter version: 1.11.5
+[0m01:39:46.931942 [info ] [MainThread]: Configuration:
+[0m01:39:46.932946 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m01:39:46.933942 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m01:39:46.934941 [info ] [MainThread]: Required dependencies:
+[0m01:39:46.935943 [debug] [MainThread]: Executing "git --help"
+[0m01:39:46.940983 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m01:39:46.941943 [info ] [MainThread]: Connection:
+[0m01:39:46.942949 [info ] [MainThread]:   account: AARRXZT-VXB87449
+[0m01:39:46.943940 [info ] [MainThread]:   user: ABDALLAHASHRAF
+[0m01:39:46.944943 [info ] [MainThread]:   database: PITCHIQ_SILVER
+[0m01:39:46.945941 [info ] [MainThread]:   warehouse: PITCHIQ_WH
+[0m01:39:46.947946 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m01:39:46.948949 [info ] [MainThread]:   schema: TRANSFORMED
+[0m01:39:46.949949 [info ] [MainThread]:   authenticator: None
+[0m01:39:46.950945 [info ] [MainThread]:   oauth_client_id: None
+[0m01:39:46.951992 [info ] [MainThread]:   query_tag: None
+[0m01:39:46.952942 [info ] [MainThread]:   client_session_keep_alive: False
+[0m01:39:46.953941 [info ] [MainThread]:   host: None
+[0m01:39:46.954942 [info ] [MainThread]:   port: None
+[0m01:39:46.954942 [info ] [MainThread]:   proxy_host: None
+[0m01:39:46.955942 [info ] [MainThread]:   proxy_port: None
+[0m01:39:46.956941 [info ] [MainThread]:   protocol: None
+[0m01:39:46.956941 [info ] [MainThread]:   connect_retries: 1
+[0m01:39:46.957942 [info ] [MainThread]:   connect_timeout: None
+[0m01:39:46.958941 [info ] [MainThread]:   retry_on_database_errors: False
+[0m01:39:46.959941 [info ] [MainThread]:   retry_all: False
+[0m01:39:46.959941 [info ] [MainThread]:   insecure_mode: False
+[0m01:39:46.960944 [info ] [MainThread]:   reuse_connections: True
+[0m01:39:46.961951 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m01:39:46.962944 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m01:39:46.964942 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m01:39:47.478940 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m01:39:48.880406 [debug] [MainThread]: Using snowflake connection "debug"
+[0m01:39:49.201363 [debug] [MainThread]: On debug: select 1 as id
+[0m01:39:49.202364 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:39:51.472044 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.269 seconds
+[0m01:39:51.474042 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m01:39:51.476046 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m01:39:51.478045 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <D:\Iti\graduation project\football-analytics\dbt\dbt_project.yml> not found
+
+[0m01:39:51.479045 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m01:39:51.482046 [debug] [MainThread]: Command `dbt debug` failed at 01:39:51.482046 after 5.76 seconds
+[0m01:39:51.483048 [debug] [MainThread]: Connection 'debug' was left open.
+[0m01:39:51.485045 [debug] [MainThread]: On debug: Close
+[0m01:39:52.007111 [debug] [MainThread]: Flushing usage events
+[0m01:39:52.775138 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:40:09.520635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222A33D5050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222A33D6C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000222A332EAD0>]}
+
+
+============================== 01:40:09.525600 | db8d6a2f-56f9-41af-9394-41f211889d3d ==============================
+[0m01:40:09.525600 [info ] [MainThread]: Running with dbt=1.11.11
+[0m01:40:09.526606 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abdallah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init pitchiq', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m01:40:09.551633 [info ] [MainThread]: A project called pitchiq already exists here.
+[0m01:40:09.553649 [debug] [MainThread]: Command `dbt init` succeeded at 01:40:09.553649 after 0.14 seconds
+[0m01:40:09.553649 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002229CB742D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002229C895C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002229C895810>]}
+[0m01:40:09.554648 [debug] [MainThread]: Flushing usage events
+[0m01:40:10.129591 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:40:18.950363 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DE824DEA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DE82595B10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DEFF0376D0>]}
+
+
+============================== 01:40:18.954172 | e10d4f92-76ab-462d-b892-4028a24181d5 ==============================
+[0m01:40:18.954172 [info ] [MainThread]: Running with dbt=1.11.11
+[0m01:40:18.956173 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abdallah\\.dbt', 'indirect_selection': 'eager', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m01:40:18.980613 [info ] [MainThread]: dbt version: 1.11.11
+[0m01:40:18.981614 [info ] [MainThread]: python version: 3.11.3
+[0m01:40:18.982614 [info ] [MainThread]: python path: C:\Users\Abdallah\AppData\Local\Programs\Python\Python311\python.exe
+[0m01:40:18.983613 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m01:40:19.930498 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m01:40:19.931485 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m01:40:19.931485 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m01:40:20.013585 [info ] [MainThread]: Using profiles dir at C:\Users\Abdallah\.dbt
+[0m01:40:20.014546 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abdallah\.dbt\profiles.yml
+[0m01:40:20.015542 [info ] [MainThread]: Using dbt_project.yml file at D:\Iti\graduation project\football-analytics\dbt\dbt_project.yml
+[0m01:40:20.016570 [info ] [MainThread]: adapter type: snowflake
+[0m01:40:20.017547 [info ] [MainThread]: adapter version: 1.11.5
+[0m01:40:20.018543 [info ] [MainThread]: Configuration:
+[0m01:40:20.019555 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m01:40:20.020547 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m01:40:20.021554 [info ] [MainThread]: Required dependencies:
+[0m01:40:20.022547 [debug] [MainThread]: Executing "git --help"
+[0m01:40:20.027551 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m01:40:20.029543 [info ] [MainThread]: Connection:
+[0m01:40:20.029543 [info ] [MainThread]:   account: AARRXZT-VXB87449
+[0m01:40:20.030604 [info ] [MainThread]:   user: ABDALLAHASHRAF
+[0m01:40:20.031561 [info ] [MainThread]:   database: PITCHIQ_SILVER
+[0m01:40:20.031561 [info ] [MainThread]:   warehouse: PITCHIQ_WH
+[0m01:40:20.032542 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m01:40:20.033543 [info ] [MainThread]:   schema: TRANSFORMED
+[0m01:40:20.034547 [info ] [MainThread]:   authenticator: None
+[0m01:40:20.035547 [info ] [MainThread]:   oauth_client_id: None
+[0m01:40:20.035547 [info ] [MainThread]:   query_tag: None
+[0m01:40:20.036546 [info ] [MainThread]:   client_session_keep_alive: False
+[0m01:40:20.037603 [info ] [MainThread]:   host: None
+[0m01:40:20.038559 [info ] [MainThread]:   port: None
+[0m01:40:20.039549 [info ] [MainThread]:   proxy_host: None
+[0m01:40:20.040547 [info ] [MainThread]:   proxy_port: None
+[0m01:40:20.042553 [info ] [MainThread]:   protocol: None
+[0m01:40:20.043541 [info ] [MainThread]:   connect_retries: 1
+[0m01:40:20.044546 [info ] [MainThread]:   connect_timeout: None
+[0m01:40:20.044546 [info ] [MainThread]:   retry_on_database_errors: False
+[0m01:40:20.045569 [info ] [MainThread]:   retry_all: False
+[0m01:40:20.046547 [info ] [MainThread]:   insecure_mode: False
+[0m01:40:20.047547 [info ] [MainThread]:   reuse_connections: True
+[0m01:40:20.047547 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m01:40:20.048577 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m01:40:20.049545 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m01:40:20.550590 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m01:40:20.630590 [debug] [MainThread]: Using snowflake connection "debug"
+[0m01:40:20.631609 [debug] [MainThread]: On debug: select 1 as id
+[0m01:40:20.631609 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:40:22.498874 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.867 seconds
+[0m01:40:22.500786 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m01:40:22.502831 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m01:40:22.503786 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <D:\Iti\graduation project\football-analytics\dbt\dbt_project.yml> not found
+
+[0m01:40:22.503786 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m01:40:22.505784 [debug] [MainThread]: Command `dbt debug` failed at 01:40:22.505784 after 3.67 seconds
+[0m01:40:22.506784 [debug] [MainThread]: Connection 'debug' was left open.
+[0m01:40:22.507831 [debug] [MainThread]: On debug: Close
+[0m01:40:22.990484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DE83601790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DE94070AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002DEFBAA5A50>]}
+[0m01:40:22.991441 [debug] [MainThread]: Flushing usage events
+[0m01:40:23.574080 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m01:58:43.409408 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184FE3FD710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184FE39FA50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184FE39F710>]}
+
+
+============================== 01:58:43.414453 | 3caf21fb-d855-4f18-89a4-0843a1926a87 ==============================
+[0m01:58:43.414453 [info ] [MainThread]: Running with dbt=1.11.11
+[0m01:58:43.415409 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abdallah\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt debug', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m01:58:43.448409 [info ] [MainThread]: dbt version: 1.11.11
+[0m01:58:43.448409 [info ] [MainThread]: python version: 3.11.3
+[0m01:58:43.449410 [info ] [MainThread]: python path: D:\Iti\graduation project\football-analytics\venv\Scripts\python.exe
+[0m01:58:43.450410 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m01:58:44.653386 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m01:58:44.653386 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m01:58:44.654432 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m01:58:44.726432 [info ] [MainThread]: Using profiles dir at C:\Users\Abdallah\.dbt
+[0m01:58:44.727385 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abdallah\.dbt\profiles.yml
+[0m01:58:44.728385 [info ] [MainThread]: Using dbt_project.yml file at D:\Iti\graduation project\football-analytics\dbt\dbt_project.yml
+[0m01:58:44.730434 [info ] [MainThread]: adapter type: snowflake
+[0m01:58:44.730434 [info ] [MainThread]: adapter version: 1.11.5
+[0m01:58:44.731434 [info ] [MainThread]: Configuration:
+[0m01:58:44.732386 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m01:58:44.734389 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m01:58:44.735386 [info ] [MainThread]: Required dependencies:
+[0m01:58:44.735386 [debug] [MainThread]: Executing "git --help"
+[0m01:58:44.743399 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m01:58:44.745389 [info ] [MainThread]: Connection:
+[0m01:58:44.747391 [info ] [MainThread]:   account: AARRXZT-VXB87449
+[0m01:58:44.748385 [info ] [MainThread]:   user: ABDALLAHASHRAF
+[0m01:58:44.749384 [info ] [MainThread]:   database: PITCHIQ_SILVER
+[0m01:58:44.749384 [info ] [MainThread]:   warehouse: PITCHIQ_WH
+[0m01:58:44.750385 [info ] [MainThread]:   role: ACCOUNTADMIN
+[0m01:58:44.751428 [info ] [MainThread]:   schema: TRANSFORMED
+[0m01:58:44.752446 [info ] [MainThread]:   authenticator: None
+[0m01:58:44.753465 [info ] [MainThread]:   oauth_client_id: None
+[0m01:58:44.754384 [info ] [MainThread]:   query_tag: None
+[0m01:58:44.754384 [info ] [MainThread]:   client_session_keep_alive: False
+[0m01:58:44.755428 [info ] [MainThread]:   host: None
+[0m01:58:44.757402 [info ] [MainThread]:   port: None
+[0m01:58:44.758388 [info ] [MainThread]:   proxy_host: None
+[0m01:58:44.759388 [info ] [MainThread]:   proxy_port: None
+[0m01:58:44.760387 [info ] [MainThread]:   protocol: None
+[0m01:58:44.760387 [info ] [MainThread]:   connect_retries: 1
+[0m01:58:44.761390 [info ] [MainThread]:   connect_timeout: None
+[0m01:58:44.763388 [info ] [MainThread]:   retry_on_database_errors: False
+[0m01:58:44.764387 [info ] [MainThread]:   retry_all: False
+[0m01:58:44.765390 [info ] [MainThread]:   insecure_mode: False
+[0m01:58:44.766387 [info ] [MainThread]:   reuse_connections: True
+[0m01:58:44.768388 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m01:58:44.769389 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m01:58:44.770384 [info ] [MainThread]: Registered adapter: snowflake=1.11.5
+[0m01:58:45.573903 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m01:58:45.709860 [debug] [MainThread]: Using snowflake connection "debug"
+[0m01:58:45.710860 [debug] [MainThread]: On debug: select 1 as id
+[0m01:58:45.711907 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m01:58:47.340045 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.628 seconds
+[0m01:58:47.342081 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m01:58:47.343039 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m01:58:47.344038 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <D:\Iti\graduation project\football-analytics\dbt\dbt_project.yml> not found
+
+[0m01:58:47.344038 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m01:58:47.346038 [debug] [MainThread]: Command `dbt debug` failed at 01:58:47.346038 after 4.03 seconds
+[0m01:58:47.347037 [debug] [MainThread]: Connection 'debug' was left open.
+[0m01:58:47.347037 [debug] [MainThread]: On debug: Close
+[0m01:58:47.812534 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184FCFC9CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000184F79CF690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001848FC75E10>]}
+[0m01:58:47.816533 [debug] [MainThread]: Flushing usage events
+[0m01:58:48.591946 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:12:15.906491 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001844F981B90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001844F850190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001844F8515D0>]}
+
+
+============================== 02:12:15.911667 | d1ef566e-7437-43f3-a687-4381369a2659 ==============================
+[0m02:12:15.911667 [info ] [MainThread]: Running with dbt=1.11.11
+[0m02:12:15.913353 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abdallah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init football_analytics', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m02:12:15.951981 [debug] [MainThread]: Starter project path: D:\Iti\graduation project\football-analytics\venv\Lib\site-packages\dbt\include\starter_project
+[0m02:12:15.973710 [info ] [MainThread]: 
+Your new dbt project "football_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m02:12:15.974666 [info ] [MainThread]: Setting up your profile.
+[0m02:12:21.539932 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m02:12:21.540935 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m02:12:21.540935 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m02:13:24.015778 [info ] [MainThread]: Profile football_analytics written to C:\Users\Abdallah\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m02:13:24.017776 [debug] [MainThread]: Command `dbt init` succeeded at 02:13:24.017776 after 68.25 seconds
+[0m02:13:24.019781 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001844F5CFB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001844F6C1E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001845FD02110>]}
+[0m02:13:24.020780 [debug] [MainThread]: Flushing usage events
+[0m02:13:24.699756 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:25:47.304727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5963368D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5960D1F50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5962825D0>]}
+
+
+============================== 02:25:47.309728 | 7d969cbe-8626-4392-bac7-f5e1cb836b7d ==============================
+[0m02:25:47.309728 [info ] [MainThread]: Running with dbt=1.11.11
+[0m02:25:47.310682 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\Abdallah\\.dbt', 'indirect_selection': 'eager', 'invocation_command': 'dbt init football_analytics', 'use_colors': 'True', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m02:25:47.345293 [debug] [MainThread]: Starter project path: D:\Iti\graduation project\football-analytics\venv\Lib\site-packages\dbt\include\starter_project
+[0m02:25:47.366344 [info ] [MainThread]: 
+Your new dbt project "football_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m02:25:47.368299 [info ] [MainThread]: Setting up your profile.
+[0m02:26:09.785937 [debug] [MainThread]: Command `dbt init` succeeded at 02:26:09.784938 after 22.57 seconds
+[0m02:26:09.786937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F58F8BA8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F58F8FF650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001F5960D1F10>]}
+[0m02:26:09.788938 [debug] [MainThread]: Flushing usage events
+[0m02:26:10.466563 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:26:34.112412 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAD3DC4210>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAD3D0EC90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAD3CFFFD0>]}
+
+
+============================== 02:26:34.116411 | 79e18b50-2e6f-465a-9229-c38208d7883d ==============================
+[0m02:26:34.116411 [info ] [MainThread]: Running with dbt=1.11.11
+[0m02:26:34.118366 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abdallah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt init football_analytics', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m02:26:34.150367 [debug] [MainThread]: Starter project path: D:\Iti\graduation project\football-analytics\venv\Lib\site-packages\dbt\include\starter_project
+[0m02:26:34.173368 [info ] [MainThread]: 
+Your new dbt project "football_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m02:26:34.174368 [info ] [MainThread]: Setting up your profile.
+[0m02:26:44.024379 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m02:26:44.025361 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m02:26:44.025361 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m02:27:53.714456 [info ] [MainThread]: Profile football_analytics written to C:\Users\Abdallah\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m02:27:53.717460 [debug] [MainThread]: Command `dbt init` succeeded at 02:27:53.717460 after 79.70 seconds
+[0m02:27:53.718406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACD33A8D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CAE3DE15D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001CACD388210>]}
+[0m02:27:53.719411 [debug] [MainThread]: Flushing usage events
+[0m02:27:54.392650 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m02:29:48.700329 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016102606990>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001610253FF50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001610254EB50>]}
+
+
+============================== 02:29:48.704938 | 7da35d5b-1302-4fa2-9b98-13e13060aca4 ==============================
+[0m02:29:48.704938 [info ] [MainThread]: Running with dbt=1.11.11
+[0m02:29:48.706940 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\Abdallah\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m02:29:48.739584 [info ] [MainThread]: dbt version: 1.11.11
+[0m02:29:48.740545 [info ] [MainThread]: python version: 3.11.3
+[0m02:29:48.741553 [info ] [MainThread]: python path: D:\Iti\graduation project\football-analytics\venv\Scripts\python.exe
+[0m02:29:48.742540 [info ] [MainThread]: os info: Windows-10-10.0.26200-SP0
+[0m02:29:49.991626 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m02:29:49.992610 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m02:29:49.992610 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m02:29:50.068611 [info ] [MainThread]: Using profiles dir at C:\Users\Abdallah\.dbt
+[0m02:29:50.069611 [info ] [MainThread]: Using profiles.yml file at C:\Users\Abdallah\.dbt\profiles.yml
+[0m02:29:50.070611 [info ] [MainThread]: Using dbt_project.yml file at D:\Iti\graduation project\football-analytics\dbt\dbt_project.yml
+[0m02:29:50.071561 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m02:29:50.072563 [debug] [MainThread]: Command `dbt debug` failed at 02:29:50.072563 after 1.48 seconds
+[0m02:29:50.073596 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000016102640A50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000161022AFB90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001617BF1DC90>]}
+[0m02:29:50.074564 [debug] [MainThread]: Flushing usage events
+[0m02:29:50.781708 [debug] [MainThread]: An error was encountered while trying to flush usage events

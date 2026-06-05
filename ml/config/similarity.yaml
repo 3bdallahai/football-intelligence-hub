@@ -1,0 +1,73 @@
+metric: cosine
+algorithm: brute
+
+# =========================
+# FEATURE LISTS ONLY
+# =========================
+
+outfield_features:
+  - goals_per_90
+  - assists_per_90
+  - shots_per_90
+  - interceptions
+  - tackles_won
+  - yellow_cards
+  - red_cards
+  - points_per_match
+  - goal_difference_per_90
+  - on_off_difference
+
+goalkeeper_features:
+  - save_percentage
+  - goals_conceded_per_90
+  - clean_sheet_percentage
+  - saves
+  - shots_on_target_against
+  - wins
+  - draws
+  - losses
+  - yellow_cards
+  - red_cards
+
+
+# =========================
+# POSITION WEIGHTS (SEPARATE BLOCK)
+# =========================
+
+outfield_weights:
+
+  FW:
+    goals_per_90: 3.0
+    assists_per_90: 2.5
+    shots_per_90: 2.0
+    interceptions: 0.5
+    tackles_won: 0.5
+    yellow_cards: 0.3
+    red_cards: 0.3
+    points_per_match: 1.0
+    goal_difference_per_90: 1.0
+    on_off_difference: 1.0
+
+  MF:
+    goals_per_90: 1.5
+    assists_per_90: 2.0
+    shots_per_90: 1.0
+    interceptions: 1.5
+    tackles_won: 1.5
+    yellow_cards: 0.5
+    red_cards: 0.5
+    points_per_match: 1.5
+    goal_difference_per_90: 1.0
+    on_off_difference: 1.0
+
+  DF:
+    goals_per_90: 0.5
+    assists_per_90: 0.5
+    shots_per_90: 0.3
+    interceptions: 3.0
+    tackles_won: 3.0
+    yellow_cards: 0.8
+    red_cards: 0.8
+    points_per_match: 1.5
+    goal_difference_per_90: 1.0
+    on_off_difference: 1.0

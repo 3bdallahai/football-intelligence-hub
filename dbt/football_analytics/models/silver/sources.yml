@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: bronze
+    database: FOOTBALL_BRONZE
+    schema: RAW
+    tables:
+      - name: BRONZE_PLAYERS
+      - name: BRONZE_MARKET_VALUES

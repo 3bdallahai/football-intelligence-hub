@@ -1,0 +1,47 @@
+name: 'football_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'football_analytics'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  football_analytics:
+
+    # -------------------------
+    # SILVER LAYER (main dbt output)
+    # -------------------------
+    silver:
+      +materialized: table
+      +database: FOOTBALL_SILVER
+      +schema: TRANSFORMED
+
+    # -------------------------
+    # GOLD LAYER (optional analytics layer)
+    # -------------------------
+    gold:
+      +materialized: table
+      +database: FOOTBALL_GOLD
+      +schema: MART
+    similarity:
+      +materialized: table
+      +database: FOOTBALL_GOLD
+      +schema: SIMILARITY
+
+    # -------------------------
+    # BRONZE is NOT built by dbt (important)
+    # dbt only READS from it
+    # -------------------------
+    bronze:
+      +enabled: false
