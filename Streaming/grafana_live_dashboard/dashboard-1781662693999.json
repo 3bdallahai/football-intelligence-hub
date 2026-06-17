@@ -1,0 +1,1116 @@
+{
+  "apiVersion": "dashboard.grafana.app/v2",
+  "kind": "Dashboard",
+  "metadata": {
+    "name": "adp2xlv",
+    "namespace": "default",
+    "uid": "ddd95337-240f-49c0-8b27-b860fcccb07c",
+    "resourceVersion": "1780724026913984",
+    "generation": 37,
+    "creationTimestamp": "2026-06-04T21:44:10Z",
+    "labels": {
+      "grafana.app/deprecatedInternalID": "3020221476864"
+    },
+    "annotations": {
+      "grafana.app/createdBy": "user:afmlpv71y93i8e",
+      "grafana.app/folder": "",
+      "grafana.app/saved-from-ui": "Grafana v13.0.1+security-01 (9bbe672d)",
+      "grafana.app/updatedBy": "user:afmlpv71y93i8e",
+      "grafana.app/updatedTimestamp": "2026-06-06T05:33:46Z"
+    }
+  },
+  "spec": {
+    "annotations": [
+      {
+        "kind": "AnnotationQuery",
+        "spec": {
+          "query": {
+            "kind": "DataQuery",
+            "group": "grafana",
+            "version": "v0",
+            "datasource": {
+              "name": "-- Grafana --"
+            },
+            "spec": {}
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "builtIn": true
+        }
+      }
+    ],
+    "cursorSync": "Off",
+    "editable": true,
+    "elements": {
+      "panel-10": {
+        "kind": "Panel",
+        "spec": {
+          "id": 10,
+          "title": "New panel",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "mysql",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "bfmltlo07ltkwe"
+                      },
+                      "spec": {
+                        "dataset": "football_live",
+                        "editorMode": "code",
+                        "format": "table",
+                        "rawQuery": true,
+                        "rawSql": "SELECT\r\n    type_display_name AS event_type,\r\n\r\n    SUM(CASE WHEN team_name = 'PSG' THEN 1 ELSE 0 END) AS PSG,\r\n    SUM(CASE WHEN team_name = 'Arsenal' THEN 1 ELSE 0 END) AS Arsenal\r\n\r\nFROM match_events_live\r\nWHERE type_display_name IN ('Pass','Shot','Tackle','Aerial','Dribble','Clearance')\r\nGROUP BY type_display_name\r\nORDER BY type_display_name;",
+                        "sql": {
+                          "columns": [
+                            {
+                              "parameters": [],
+                              "type": "function"
+                            }
+                          ],
+                          "groupBy": [
+                            {
+                              "property": {
+                                "type": "string"
+                              },
+                              "type": "groupBy"
+                            }
+                          ],
+                          "limit": 50
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "barchart",
+            "version": "13.0.1+security-01",
+            "spec": {
+              "options": {
+                "barRadius": 0,
+                "barWidth": 0.97,
+                "fullHighlight": false,
+                "groupWidth": 0.7,
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "right",
+                  "showLegend": true
+                },
+                "orientation": "horizontal",
+                "showValue": "never",
+                "stacking": "none",
+                "tooltip": {
+                  "hideZeros": false,
+                  "mode": "single",
+                  "sort": "none"
+                },
+                "xField": "event_type",
+                "xTickLabelRotation": 0,
+                "xTickLabelSpacing": 100
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "#e24d5f"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "fillOpacity": 80,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "lineWidth": 1,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  }
+                },
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-4": {
+        "kind": "Panel",
+        "spec": {
+          "id": 4,
+          "title": "Shot Map",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "mysql",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "bfmltlo07ltkwe"
+                      },
+                      "spec": {
+                        "dataset": "football_live",
+                        "editorMode": "code",
+                        "format": "table",
+                        "rawQuery": true,
+                        "rawSql": "SELECT x, y, is_goal, player_name, minute, team_name\r\nFROM match_events_live\r\nWHERE is_shot = 1;",
+                        "sql": {
+                          "columns": [
+                            {
+                              "parameters": [],
+                              "type": "function"
+                            }
+                          ],
+                          "groupBy": [
+                            {
+                              "property": {
+                                "type": "string"
+                              },
+                              "type": "groupBy"
+                            }
+                          ],
+                          "limit": 50
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "volkovlabs-echarts-panel",
+            "version": "7.2.5",
+            "spec": {
+              "options": {
+                "baidu": {
+                  "callback": "bmapReady",
+                  "key": ""
+                },
+                "editor": {
+                  "format": "auto"
+                },
+                "editorMode": "code",
+                "gaode": {
+                  "key": "",
+                  "plugin": "AMap.Scale,AMap.ToolBar"
+                },
+                "getOption": "const data = context.panel.data;\n\nconst green = '#4a7c4e';\nconst white = '#ffffff';\n\nconst pitch = [\n  { type: 'rect', shape: { x: 0, y: 0, width: 600, height: 400 }, style: { fill: green, stroke: white, lineWidth: 2 } },\n  { type: 'line', shape: { x1: 300, y1: 0, x2: 300, y2: 400 }, style: { stroke: white, lineWidth: 2 } },\n  { type: 'circle', shape: { cx: 300, cy: 200, r: 60 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'circle', shape: { cx: 300, cy: 200, r: 4 }, style: { fill: white } },\n  { type: 'rect', shape: { x: 0, y: 100, width: 110, height: 200 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'rect', shape: { x: 490, y: 100, width: 110, height: 200 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'rect', shape: { x: 0, y: 150, width: 40, height: 100 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'rect', shape: { x: 560, y: 150, width: 40, height: 100 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'circle', shape: { cx: 80, cy: 200, r: 3 }, style: { fill: white } },\n  { type: 'circle', shape: { cx: 520, cy: 200, r: 3 }, style: { fill: white } },\n];\n\nconst f = data.series[0]?.fields || [];\n\n\nconst X = f.find(f => f.name === 'x')?.values?.toArray?.() || [];\nconst Y = f.find(f => f.name === 'y')?.values?.toArray?.() || [];\nconst isGoal = f.find(f => f.name === 'is_goal')?.values?.toArray?.() || [];\nconst pName = f.find(f => f.name === 'player_name')?.values?.toArray?.() || [];\nconst min = f.find(f => f.name === 'minute')?.values?.toArray?.() || [];\nconst tName = f.find(f => f.name === 'team_name')?.values?.toArray?.() || [];\n\nconst points = X.map((x, i) => ({\n  value: [\n    (x / 100) * 600,\n    (Y[i] / 100) * 400\n  ],\n  symbolSize: isGoal[i] ? 18 : 11,\n  itemStyle: {\n    color: isGoal[i] ? '#FFD700'\n      : tName[i] === 'Arsenal' ? '#EF0107'\n        : '#003090',\n    opacity: 0.9,\n    borderColor: '#fff',\n    borderWidth: 1\n  },\n  name: `${pName[i]} | ${min[i]}' | ${isGoal[i] ? '⚽ GOAL' : 'Shot'}`\n}));\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'item',\n    formatter: p => p.data?.name\n  },\n  graphic: { elements: pitch },\n  xAxis: { min: 0, max: 600, show: false },\n  yAxis: { min: 0, max: 400, show: false },\n  grid: { left: 0, right: 0, top: 0, bottom: 0 },\n  series: [{\n    type: 'scatter',\n    data: points,\n    symbol: 'circle'\n  }]\n};",
+                "google": {
+                  "callback": "gmapReady",
+                  "key": ""
+                },
+                "map": "none",
+                "renderer": "canvas",
+                "themeEditor": {
+                  "config": "{}",
+                  "name": "default"
+                },
+                "visualEditor": {
+                  "code": "const data = context.panel.data;\nconst fields = data.series?.[0]?.fields || [];\n\nconsole.log(fields.map(f => f.name));\n\nreturn {\n  xAxis: { show: false },\n  yAxis: { show: false },\n  series: [{\n    type: 'scatter',\n    data: []\n  }]\n};\n",
+                  "dataset": [],
+                  "series": []
+                }
+              },
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              }
+            }
+          },
+          "transparent": true
+        }
+      },
+      "panel-5": {
+        "kind": "Panel",
+        "spec": {
+          "id": 5,
+          "title": "Player Heatmap",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "mysql",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "bfmltlo07ltkwe"
+                      },
+                      "spec": {
+                        "dataset": "football_live",
+                        "editorMode": "code",
+                        "format": "table",
+                        "rawQuery": true,
+                        "rawSql": "SELECT x, y\r\nFROM match_events_live\r\nWHERE is_touch = 1\r\n  AND player_name = '$player_name';",
+                        "sql": {
+                          "columns": [
+                            {
+                              "parameters": [],
+                              "type": "function"
+                            }
+                          ],
+                          "groupBy": [
+                            {
+                              "property": {
+                                "type": "string"
+                              },
+                              "type": "groupBy"
+                            }
+                          ],
+                          "limit": 50
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "volkovlabs-echarts-panel",
+            "version": "7.2.5",
+            "spec": {
+              "options": {
+                "baidu": {
+                  "callback": "bmapReady",
+                  "key": ""
+                },
+                "editor": {
+                  "format": "auto"
+                },
+                "editorMode": "code",
+                "gaode": {
+                  "key": "",
+                  "plugin": "AMap.Scale,AMap.ToolBar"
+                },
+                "getOption": "const data = context.panel.data;\n\nconst green = '#4a7c4e';\nconst white = '#ffffff';\n\nconst pitch = [\n  { type: 'rect', shape: { x: 0, y: 0, width: 600, height: 400 }, style: { fill: green, stroke: white, lineWidth: 2 } },\n  { type: 'line', shape: { x1: 300, y1: 0, x2: 300, y2: 400 }, style: { stroke: white, lineWidth: 2 } },\n  { type: 'circle', shape: { cx: 300, cy: 200, r: 60 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'rect', shape: { x: 0, y: 100, width: 110, height: 200 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'rect', shape: { x: 490, y: 100, width: 110, height: 200 }, style: { fill: 'none', stroke: white, lineWidth: 2 } }\n];\n\nconst f = data.series[0]?.fields || [];\n\nconst X = f.find(f => f.name === 'x')?.values?.toArray?.() || [];\nconst Y = f.find(f => f.name === 'y')?.values?.toArray?.() || [];\n\n/*\n  🔥 REAL HEATMAP EMULATION (works everywhere)\n*/\nconst heatPoints = X.map((x, i) => ({\n  value: [\n    x * 6,\n    (100 - Y[i]) * 4\n  ],\n  symbolSize: 30,   // 🔥 big blur = heat effect\n  itemStyle: {\n    color: 'rgba(255, 0, 0, 0.25)'\n  }\n}));\n\nreturn {\n  backgroundColor: 'transparent',\n\n  graphic: { elements: pitch },\n\n  xAxis: {\n    min: 0,\n    max: 600,\n    show: false\n  },\n\n  yAxis: {\n    min: 0,\n    max: 400,\n    show: false\n  },\n\n  grid: {\n    left: 0,\n    right: 0,\n    top: 0,\n    bottom: 0\n  },\n\n  series: [\n    {\n      type: 'scatter',\n      data: heatPoints,\n      symbol: 'circle',\n      blurSize: 40\n    }\n  ]\n};",
+                "google": {
+                  "callback": "gmapReady",
+                  "key": ""
+                },
+                "map": "none",
+                "renderer": "canvas",
+                "themeEditor": {
+                  "config": "{}",
+                  "name": "default"
+                },
+                "visualEditor": {
+                  "code": "return {\n  dataset: context.editor.dataset,\n  series: context.editor.series,\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n}\n",
+                  "dataset": [],
+                  "series": []
+                }
+              },
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-6": {
+        "kind": "Panel",
+        "spec": {
+          "id": 6,
+          "title": "Pass Map",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "mysql",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "bfmltlo07ltkwe"
+                      },
+                      "spec": {
+                        "dataset": "football_live",
+                        "editorMode": "code",
+                        "format": "table",
+                        "rawQuery": true,
+                        "rawSql": "SELECT x, y, end_x, end_y, outcome_type_display_name\r\nFROM match_events_live\r\nWHERE type_display_name = 'Pass'\r\n  AND player_name = '$player_name'\r\n  AND end_x IS NOT NULL;",
+                        "sql": {
+                          "columns": [
+                            {
+                              "parameters": [],
+                              "type": "function"
+                            }
+                          ],
+                          "groupBy": [
+                            {
+                              "property": {
+                                "type": "string"
+                              },
+                              "type": "groupBy"
+                            }
+                          ],
+                          "limit": 50
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "volkovlabs-echarts-panel",
+            "version": "7.2.5",
+            "spec": {
+              "options": {
+                "baidu": {
+                  "callback": "bmapReady",
+                  "key": ""
+                },
+                "editor": {
+                  "format": "auto"
+                },
+                "editorMode": "code",
+                "gaode": {
+                  "key": "",
+                  "plugin": "AMap.Scale,AMap.ToolBar"
+                },
+                "getOption": "const data = context.panel.data;\n\nconst green = '#4a7c4e';\nconst white = '#ffffff';\n\nconst pitch = [\n  { type: 'rect', shape: { x: 0, y: 0, width: 600, height: 400 }, style: { fill: green, stroke: white, lineWidth: 2 } },\n  { type: 'line', shape: { x1: 300, y1: 0, x2: 300, y2: 400 }, style: { stroke: white, lineWidth: 2 } },\n  { type: 'circle', shape: { cx: 300, cy: 200, r: 60 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'circle', shape: { cx: 300, cy: 200, r: 4 }, style: { fill: white } },\n  { type: 'rect', shape: { x: 0, y: 100, width: 110, height: 200 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'rect', shape: { x: 490, y: 100, width: 110, height: 200 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'rect', shape: { x: 0, y: 150, width: 40, height: 100 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'rect', shape: { x: 560, y: 150, width: 40, height: 100 }, style: { fill: 'none', stroke: white, lineWidth: 2 } },\n  { type: 'circle', shape: { cx: 80, cy: 200, r: 3 }, style: { fill: white } },\n  { type: 'circle', shape: { cx: 520, cy: 200, r: 3 }, style: { fill: white } },\n];\n\nconst f = data.series[0]?.fields || [];\n\nconst X = f.find(f => f.name === 'x')?.values?.toArray?.() || [];\nconst Y = f.find(f => f.name === 'y')?.values?.toArray?.() || [];\nconst EX = f.find(f => f.name === 'end_x')?.values?.toArray?.() || [];\nconst EY = f.find(f => f.name === 'end_y')?.values?.toArray?.() || [];\nconst OUT = f.find(f => f.name === 'outcome_type_display_name')?.values?.toArray?.() || [];\nconst pName = f.find(f => f.name === 'player_name')?.values?.toArray?.() || [];\nconst min = f.find(f => f.name === 'minute')?.values?.toArray?.() || [];\n\nconst arrows = [];\n\nfor (let i = 0; i < X.length; i++) {\n  if (EX[i] == null || EY[i] == null) continue;\n\n  const success = OUT[i] === 'Successful';\n\n  // pass line\n  arrows.push({\n    type: 'line',\n    shape: {\n      x1: (X[i] / 100) * 600,\n      y1: (Y[i] / 100) * 400,\n      x2: (EX[i] / 100) * 600,\n      y2: (EY[i] / 100) * 400\n    },\n    style: {\n      stroke: success ? 'rgba(255,255,255,0.85)' : 'rgba(255,80,80,0.6)',\n      lineWidth: success ? 2 : 1.5\n    },\n    z: 10\n  });\n\n  // start point\n  arrows.push({\n    type: 'circle',\n    shape: {\n      cx: (X[i] / 100) * 600,\n      cy: (Y[i] / 100) * 400,\n      r: 2.5\n    },\n    style: { fill: '#ffffff' },\n    z: 20\n  });\n\n  // end point\n  arrows.push({\n    type: 'circle',\n    shape: {\n      cx: (EX[i] / 100) * 600,\n      cy: (EY[i] / 100) * 400,\n      r: 2.5\n    },\n    style: {\n      fill: success ? '#00ff88' : '#ff5555'\n    },\n    z: 20\n  });\n}\n\nreturn {\n  backgroundColor: 'transparent',\n  tooltip: {\n    trigger: 'item',\n    formatter: p => p.data?.name\n  },\n  graphic: {\n    elements: [...pitch, ...arrows]\n  },\n  xAxis: { min: 0, max: 600, show: false },\n  yAxis: { min: 0, max: 400, show: false },\n  grid: { left: 0, right: 0, top: 0, bottom: 0 },\n  series: []\n};",
+                "google": {
+                  "callback": "gmapReady",
+                  "key": ""
+                },
+                "map": "none",
+                "renderer": "canvas",
+                "themeEditor": {
+                  "config": "{}",
+                  "name": "default"
+                },
+                "visualEditor": {
+                  "code": "return {\n  dataset: context.editor.dataset,\n  series: context.editor.series,\n  xAxis: {\n    type: 'time',\n  },\n  yAxis: {\n    type: 'value',\n    min: 'dataMin',\n  },\n}\n",
+                  "dataset": [],
+                  "series": []
+                }
+              },
+              "fieldConfig": {
+                "defaults": {},
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-7": {
+        "kind": "Panel",
+        "spec": {
+          "id": 7,
+          "title": "Player Ratings",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "mysql",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "bfmltlo07ltkwe"
+                      },
+                      "spec": {
+                        "dataset": "football_live",
+                        "editorMode": "code",
+                        "format": "table",
+                        "rawQuery": true,
+                        "rawSql": "SELECT\r\n    player_name,\r\n    team_name,\r\n    SUM(is_touch) AS touches,\r\n    SUM(is_shot) AS shots,\r\n    SUM(is_goal) AS goals,\r\n    SUM(CASE WHEN type_display_name='Pass'\r\n             AND outcome_type_display_name='Successful' THEN 1 ELSE 0 END) AS passes_completed,\r\n    SUM(CASE WHEN type_display_name='Pass' THEN 1 ELSE 0 END) AS passes_total,\r\n    ROUND(\r\n    SUM(CASE \r\n        WHEN type_display_name='Pass'\r\n         AND outcome_type_display_name='Successful' \r\n        THEN 1 ELSE 0 END)\r\n    * 100.0 / NULLIF(SUM(CASE WHEN type_display_name='Pass' THEN 1 ELSE 0 END),0)\r\n    ,1) AS pass_accuracy,\r\n    ROUND(\r\n        5.0\r\n        + (SUM(is_goal) * 2.0)\r\n        + (SUM(is_shot) * 0.3)\r\n        + (SUM(CASE WHEN type_display_name='Pass'\r\n                    AND outcome_type_display_name='Successful' THEN 1 ELSE 0 END)\r\n           / NULLIF(SUM(CASE WHEN type_display_name='Pass' THEN 1 ELSE 0 END),0) * 2.0)\r\n        + (SUM(CASE WHEN type_display_name IN ('Tackle','Interception','Clearance') THEN 1 ELSE 0 END) * 0.2)\r\n        - (SUM(card_type) * 1.0)\r\n    ,1) AS rating\r\nFROM match_events_live\r\nGROUP BY player_name, team_name\r\nORDER BY rating DESC;",
+                        "sql": {
+                          "columns": [
+                            {
+                              "parameters": [],
+                              "type": "function"
+                            }
+                          ],
+                          "groupBy": [
+                            {
+                              "property": {
+                                "type": "string"
+                              },
+                              "type": "groupBy"
+                            }
+                          ],
+                          "limit": 50
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "table",
+            "version": "13.0.1+security-01",
+            "spec": {
+              "options": {
+                "cellHeight": "sm",
+                "showHeader": true
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "custom": {
+                    "align": "auto",
+                    "cellOptions": {
+                      "type": "auto"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false
+                  }
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "scope": "series",
+                      "options": "rating"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.cellOptions",
+                        "value": {
+                          "type": "color-text"
+                        }
+                      },
+                      {
+                        "id": "thresholds",
+                        "value": {
+                          "mode": "absolute",
+                          "steps": [
+                            {
+                              "color": "green",
+                              "value": 0
+                            },
+                            {
+                              "color": "red",
+                              "value": 0
+                            },
+                            {
+                              "color": "#EAB839",
+                              "value": 6
+                            },
+                            {
+                              "color": "green",
+                              "value": 8
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "scope": "series",
+                      "options": "pass_accuracy"
+                    },
+                    "properties": [
+                      {
+                        "id": "unit",
+                        "value": "percent"
+                      },
+                      {
+                        "id": "thresholds",
+                        "value": {
+                          "mode": "percentage",
+                          "steps": [
+                            {
+                              "color": "green",
+                              "value": 0
+                            },
+                            {
+                              "color": "red",
+                              "value": 0
+                            },
+                            {
+                              "color": "#EAB839",
+                              "value": 70
+                            },
+                            {
+                              "color": "green",
+                              "value": 85
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "custom.cellOptions",
+                        "value": {
+                          "type": "color-text"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "panel-8": {
+        "kind": "Panel",
+        "spec": {
+          "id": 8,
+          "title": "Live Score",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "mysql",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "bfmltlo07ltkwe"
+                      },
+                      "spec": {
+                        "dataset": "football_live",
+                        "editorMode": "code",
+                        "format": "table",
+                        "rawQuery": true,
+                        "rawSql": "SELECT\r\n    team_name,\r\n    SUM(is_goal) AS goals\r\nFROM match_events_live\r\nGROUP BY team_name\r\nORDER BY team_name;",
+                        "sql": {
+                          "columns": [
+                            {
+                              "parameters": [],
+                              "type": "function"
+                            }
+                          ],
+                          "groupBy": [
+                            {
+                              "property": {
+                                "type": "string"
+                              },
+                              "type": "groupBy"
+                            }
+                          ],
+                          "limit": 50
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "stat",
+            "version": "13.0.1+security-01",
+            "spec": {
+              "options": {
+                "colorMode": "background",
+                "graphMode": "area",
+                "justifyMode": "auto",
+                "orientation": "auto",
+                "percentChangeColorMode": "standard",
+                "reduceOptions": {
+                  "calcs": [],
+                  "fields": "/^goals$/",
+                  "values": true
+                },
+                "showPercentChange": false,
+                "text": {
+                  "titleSize": 20,
+                  "valueSize": 40
+                },
+                "textMode": "auto",
+                "wideLayout": true
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "shades"
+                  }
+                },
+                "overrides": []
+              }
+            }
+          }
+        }
+      },
+      "panel-9": {
+        "kind": "Panel",
+        "spec": {
+          "id": 9,
+          "title": "Live Event Feed",
+          "description": "",
+          "links": [],
+          "data": {
+            "kind": "QueryGroup",
+            "spec": {
+              "queries": [
+                {
+                  "kind": "PanelQuery",
+                  "spec": {
+                    "query": {
+                      "kind": "DataQuery",
+                      "group": "mysql",
+                      "version": "v0",
+                      "datasource": {
+                        "name": "bfmltlo07ltkwe"
+                      },
+                      "spec": {
+                        "dataset": "football_live",
+                        "editorMode": "code",
+                        "format": "table",
+                        "rawQuery": true,
+                        "rawSql": "SELECT\r\n    CONCAT(minute, ':', LPAD(second, 2, '0')) AS match_time,\r\n    team_name,\r\n    player_name,\r\n    type_display_name AS event,\r\n    outcome_type_display_name AS result\r\nFROM match_events_live\r\nORDER BY minute DESC, second DESC\r\nLIMIT 30;",
+                        "sql": {
+                          "columns": [
+                            {
+                              "parameters": [],
+                              "type": "function"
+                            }
+                          ],
+                          "groupBy": [
+                            {
+                              "property": {
+                                "type": "string"
+                              },
+                              "type": "groupBy"
+                            }
+                          ],
+                          "limit": 50
+                        }
+                      }
+                    },
+                    "refId": "A",
+                    "hidden": false
+                  }
+                }
+              ],
+              "transformations": [],
+              "queryOptions": {}
+            }
+          },
+          "vizConfig": {
+            "kind": "VizConfig",
+            "group": "table",
+            "version": "13.0.1+security-01",
+            "spec": {
+              "options": {
+                "cellHeight": "sm",
+                "showHeader": true,
+                "sortBy": []
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "value": 0,
+                        "color": "green"
+                      },
+                      {
+                        "value": 80,
+                        "color": "red"
+                      }
+                    ]
+                  },
+                  "color": {
+                    "mode": "thresholds"
+                  },
+                  "custom": {
+                    "align": "auto",
+                    "cellOptions": {
+                      "type": "auto"
+                    },
+                    "footer": {
+                      "reducers": []
+                    },
+                    "inspect": false
+                  }
+                },
+                "overrides": [
+                  {
+                    "matcher": {
+                      "id": "byName",
+                      "scope": "series",
+                      "options": "event"
+                    },
+                    "properties": [
+                      {
+                        "id": "custom.cellOptions",
+                        "value": {
+                          "type": "color-text"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "layout": {
+      "kind": "GridLayout",
+      "spec": {
+        "items": [
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 0,
+              "y": 0,
+              "width": 3,
+              "height": 4,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-8"
+              }
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 3,
+              "y": 0,
+              "width": 13,
+              "height": 6,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-9"
+              }
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 16,
+              "y": 0,
+              "width": 8,
+              "height": 6,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-10"
+              }
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 7,
+              "y": 6,
+              "width": 10,
+              "height": 12,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-4"
+              }
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 2,
+              "y": 18,
+              "width": 10,
+              "height": 12,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-6"
+              }
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 13,
+              "y": 18,
+              "width": 10,
+              "height": 12,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-5"
+              }
+            }
+          },
+          {
+            "kind": "GridLayoutItem",
+            "spec": {
+              "x": 0,
+              "y": 30,
+              "width": 24,
+              "height": 11,
+              "element": {
+                "kind": "ElementReference",
+                "name": "panel-7"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "links": [],
+    "liveNow": false,
+    "preload": false,
+    "tags": [],
+    "timeSettings": {
+      "timezone": "browser",
+      "from": "now-1h",
+      "to": "now",
+      "autoRefresh": "1m",
+      "autoRefreshIntervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "hideTimepicker": false,
+      "fiscalYearStartMonth": 0
+    },
+    "title": "FEH Analytics_decision_making",
+    "variables": [
+      {
+        "kind": "QueryVariable",
+        "spec": {
+          "name": "team_name",
+          "current": {
+            "text": "PSG",
+            "value": "PSG"
+          },
+          "label": "Team",
+          "hide": "dontHide",
+          "refresh": "onDashboardLoad",
+          "skipUrlSync": false,
+          "query": {
+            "kind": "DataQuery",
+            "group": "mysql",
+            "version": "v0",
+            "datasource": {
+              "name": "bfmltlo07ltkwe"
+            },
+            "spec": {
+              "dataset": "football_live",
+              "editorMode": "code",
+              "format": "table",
+              "query": "SELECT DISTINCT team_name FROM match_events_live",
+              "rawQuery": true,
+              "rawSql": "SELECT DISTINCT team_name FROM match_events_live",
+              "refId": "SQLVariableQueryEditor-VariableQuery",
+              "sql": {
+                "columns": [
+                  {
+                    "parameters": [],
+                    "type": "function"
+                  }
+                ],
+                "groupBy": [
+                  {
+                    "property": {
+                      "type": "string"
+                    },
+                    "type": "groupBy"
+                  }
+                ],
+                "limit": 50
+              }
+            }
+          },
+          "regex": "",
+          "regexApplyTo": "value",
+          "sort": "disabled",
+          "definition": "SELECT DISTINCT team_name FROM match_events_live",
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "allowCustomValue": true
+        }
+      },
+      {
+        "kind": "QueryVariable",
+        "spec": {
+          "name": "player_name",
+          "current": {
+            "text": "Vitinha",
+            "value": "Vitinha"
+          },
+          "label": "Player",
+          "hide": "dontHide",
+          "refresh": "onTimeRangeChanged",
+          "skipUrlSync": false,
+          "query": {
+            "kind": "DataQuery",
+            "group": "mysql",
+            "version": "v0",
+            "datasource": {
+              "name": "bfmltlo07ltkwe"
+            },
+            "spec": {
+              "dataset": "football_live",
+              "editorMode": "code",
+              "format": "table",
+              "query": "SELECT DISTINCT player_name FROM match_events_live WHERE team_name = '$team_name'",
+              "rawQuery": true,
+              "rawSql": "SELECT DISTINCT player_name FROM match_events_live WHERE team_name = '$team_name'",
+              "refId": "SQLVariableQueryEditor-VariableQuery",
+              "sql": {
+                "columns": [
+                  {
+                    "parameters": [],
+                    "type": "function"
+                  }
+                ],
+                "groupBy": [
+                  {
+                    "property": {
+                      "type": "string"
+                    },
+                    "type": "groupBy"
+                  }
+                ],
+                "limit": 50
+              }
+            }
+          },
+          "regex": "",
+          "regexApplyTo": "value",
+          "sort": "disabled",
+          "definition": "SELECT DISTINCT player_name FROM match_events_live WHERE team_name = '$team_name'",
+          "options": [],
+          "multi": false,
+          "includeAll": false,
+          "allowCustomValue": true
+        }
+      }
+    ],
+    "preferences": {
+      "layout": {
+        "kind": "GridLayout",
+        "spec": {
+          "items": []
+        }
+      }
+    }
+  }
+}
