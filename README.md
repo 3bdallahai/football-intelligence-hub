@@ -14,29 +14,9 @@ Whether you're a scout looking for similar player profiles, an analyst exploring
 
 ## 🏗️ Architecture
 
-```
-Raw Data Sources
-      │
-      ▼
-┌─────────────┐     ┌──────────────┐
-│  Ingestion  │────▶│  Streaming   │  ← Real-time event processing
-└─────────────┘     └──────────────┘
-      │
-      ▼
-┌─────────────┐
-│   Airflow   │  ← Pipeline orchestration & scheduling
-└─────────────┘
-      │
-      ▼
-┌─────────────┐
-│     dbt     │  ← Data transformation & modeling
-└─────────────┘
-      │
-      ▼
-┌──────────────────────────┐
-│  ML / Similarity Engine  │  ← Player similarity & predictions
-└──────────────────────────┘
-```
+
+![Project Architecture](diagrams/project%20architecture.png)
+
 
 ---
 
